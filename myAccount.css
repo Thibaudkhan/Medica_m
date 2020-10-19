@@ -1,0 +1,60 @@
+#myAccount{
+	display:none;
+	padding-top: 56px;
+}
+
+.imageAccount{
+	background-image: url("img/personalImg.png");
+	background-size: contain;
+    background-repeat: no-repeat;
+    height: 136px;
+    width: 59%;
+    border-radius: 50%;
+    background-position-x: center;
+    margin-left: 21%;
+}
+
+#myAccount h1{
+	margin-top: 10px;
+    font-size: x-large;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+
+#myAccount p{
+	background: #45BDD6;
+    margin-top: 0;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+    height: 31px;
+    padding-top: 2%;
+    vertical-align: middle;
+    box-shadow: 0px 2px 5px black;
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    transition: width 0.5s, height 0.5s, background-color 0.5s, padding-top 0.5s, color 0.45s;
+}
+
+#myAccount p:nth-child(2){
+	background-color: #4ecde8;
+}
+
+#myAccount p:nth-child(3){
+	background-color: #54d4f0;
+}
+
+
+#myAccount p:hover{
+	color:#45BDD6;
+	background-color: white;
+	width: 85%;
+	height: 40px;
+	padding-top: 4%;
+}

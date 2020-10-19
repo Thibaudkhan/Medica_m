@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="home.css">
 	<link rel="stylesheet" type="text/css" href="menu.css">
 	<link rel="stylesheet" type="text/css" href="details.css">
+	<link rel="stylesheet" type="text/css" href="myAccount.css">
 </head>
 <body>
 	<div class="phone">
@@ -52,7 +53,7 @@
 										</div>
 									</div>
 									<div class="d-flex justify-content-center mt-3 login_container">
-										<button  onclick="display(['login','menu','home','details'],['none','block','block','none']);changeBackground();recyclerView();" type="button" name="button" class="btn login_btn">Login</button>
+										<button  onclick="display(['login','menu','home','details','myAccount'],['none','block','block','none','none']);changeBackground();recyclerView();" type="button" name="button" class="btn login_btn">Login</button>
 									</div>
 								</form>
 							</div>
@@ -83,16 +84,16 @@
 										<!-- Links -->
 										<ul class="navbar-nav mr-auto">
 											<li class="nav-item active">
-												<a class="nav-link" href="#">Médicaments <span class="sr-only">(current)</span></a>
+												<a onclick="display(['login','menu','home','details','camera','myAccount'],['none','block','block','none','none',',none'])" class="nav-link" href="#">Médicaments <span class="sr-only">(current)</span></a>
 											</li>
 											<li class="nav-item">
 												<a class="nav-link" href="#">Pathologies</a>
 											</li>
 											<li class="nav-item">
-												<a class="nav-link" href="#">Scanner</a>
+												<a onclick="display(['login','menu','home','details','camera','myAccount'],['none','block','none','none','block','none'])" class="nav-link">Scanner</a>
 											</li>
 											<li class="nav-item">
-												<a class="nav-link" href="#">Mon compte</a>
+												<a  onclick="display(['login','menu','home','details','camera','myAccount'],['none','block','none','none','none','block'])" class="nav-link" href="#">Mon compte</a>
 											</li>
 										</ul>
 										<!-- Links -->
@@ -112,9 +113,9 @@
 													Actions
 												</button>
 												<div class="dropdown-menu" style="width: 100%;padding: 6px;" aria-labelledby="action">
-													<div class="itemDroppped"><p>Afgdfgdfgfdg</p><input type="checkbox" class="dropdown-item" href="#"></div>
-													<div class="itemDroppped"><p>B</p><input type="checkbox" class="dropdown-item" href="#"></div>
-													<div class="itemDroppped"><p>C</p><input type="checkbox" class="dropdown-item" href="#"></div>
+													<div class="itemDroppped"><p>Antalgique</p><input type="checkbox" class="dropdown-item" href="#"></div>
+													<div class="itemDroppped"><p>Antipyrétique</p><input type="checkbox" class="dropdown-item" href="#"></div>
+													<div class="itemDroppped"><p>Analgésique</p><input type="checkbox" class="dropdown-item" href="#"></div>
 												</div>
 											</div>
 
@@ -123,9 +124,9 @@
 													Effets Secondaires
 												</button>
 												<div class="dropdown-menu" style="width: 100%;padding: 6px;" aria-labelledby="secondary">
-													<div class="itemDroppped"><p>dsd</p><input type="checkbox" class="dropdown-item" href="#"></div>
-													<div class="itemDroppped"><p>s</p><input type="checkbox" class="dropdown-item" href="#"></div>
-													<div class="itemDroppped"><p>aze</p><input type="checkbox" class="dropdown-item" href="#"></div>
+													<div class="itemDroppped"><p>Nausée</p><input type="checkbox" class="dropdown-item" href="#"></div>
+													<div class="itemDroppped"><p>Allucination</p><input type="checkbox" class="dropdown-item" href="#"></div>
+													<div class="itemDroppped"><p>Toux</p><input type="checkbox" class="dropdown-item" href="#"></div>
 												</div>
 											</div>
 											<button onclick="search()" type="button" class="btn btn-success">Lancer la recherche</button>
@@ -145,7 +146,18 @@
 								<h1 id="titleDetails"></h1>
 								<p id="textDetails"></p>
 								<button onclick="display(['login','menu','home','details'],['none','block','block','none']);" type="button" class="btn btn-secondary">Retour</button>
-							</div>					
+							</div>	
+							<div id="camera" onclick="display(['login','menu','home','details','camera','myAccount'],['none','block','none','block','none','none']);changeBackground();moreDetailsRecycler(0,'doliprane');">
+							</div>
+							<div id="myAccount">
+								<div class="imageAccount"></div>
+								<h1>Hélène Roissier</h1>
+								<div>
+									<p>Accéder à mon planning</p>
+									<p>Mon historique de recherche</p>
+									<p>Acheter l'application</p>
+								</div>
+							</div>				
 						</div>
 					</div>
 				</div>
