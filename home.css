@@ -1,0 +1,79 @@
+#home{
+	display: none;
+	background-color: white;
+}
+
+#recyclerView{
+    margin-top: 270px;
+
+	    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.bloc{
+	display: flex;
+	-webkit-box-shadow: 0px 0px 5px 1px #7b7b7bbf;
+-moz-box-shadow: 0px 0px 5px 1px #7b7b7bbf;
+box-shadow: 0px 0px 5px 1px #7b7b7bbf;
+    margin-bottom: 10px;
+    height: 50px;
+    background-color: white;
+}
+
+.bloc img{
+	width: 50px;
+}
+
+.bloc p{
+	margin: auto;
+}
+
+.filtre{
+	padding: 5px;
+}
+
+.dropdown{
+}
+
+.dropdown button{
+	width: 100%;
+	margin-bottom: 5px;
+
+}
+
+.itemDroppped{
+	display: flex;
+	justify-content: flex-end;
+}
+
+.itemDroppped p{
+	width: 90%;
+}
+
+.itemDroppped input{
+	width: 10%;
+}
+
+.filtre{
+-webkit-box-shadow: 0px 10px 11px -5px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 10px 11px -5px rgba(0,0,0,0.75);
+box-shadow: 0px 10px 11px -5px rgba(0,0,0,0.75);
+        position: fixed;
+    z-index: 899;
+    background-color: white;
+    width: 234px;
+    margin-top: 54px;
+}
+
+.closeFilter{
+    margin-left: 41%;
+}
+
+.closeFilter p{
+	    height: 0px;
+    font-weight: 700;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+}
+

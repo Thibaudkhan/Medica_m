@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Medicamaintenant</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="home.css">
+	<link rel="stylesheet" type="text/css" href="menu.css">
+	<link rel="stylesheet" type="text/css" href="details.css">
+</head>
+<body>
+	<div class="phone">
+		<header>
+			<h1>Voici l'application Medicamaintenant</h1>
+			<p>Il ne s'agit que d'une démo</p>
+		</header>
+
+		<main>
+
+			<header>
+				<div class="feature"></div>
+				<div class="feature"></div>
+			</header>
+
+			<div id="app">
+				<div class="page">
+					<div id="user_card">
+						<div id="login">
+							<div class="d-flex justify-content-center">
+								<div class="brand_logo_container">
+									<div id="logoMedica"> </div>
+								</div>
+							</div>
+							<div class="d-flex justify-content-center form_container">
+								<form>
+									<div class="input-group mb-3">
+										<div class="input-group-append">
+											<span class="input-group-text"><i class="fas fa-user"></i></span>
+										</div>
+										<input type="text" name="" class="form-control input_user" value="" placeholder="username">
+									</div>
+									<div class="input-group mb-2">
+										<div class="input-group-append">
+											<span class="input-group-text"><i class="fas fa-key"></i></span>
+										</div>
+										<input type="password" name="" class="form-control input_pass" value="" placeholder="password">
+									</div>
+									<div class="form-group">
+										<div class="custom-control custom-checkbox">
+											<input type="checkbox" class="custom-control-input" id="customControlInline">
+											<label class="custom-control-label" for="customControlInline">Remember me</label>
+										</div>
+									</div>
+									<div class="d-flex justify-content-center mt-3 login_container">
+										<button  onclick="display(['login','menu','home','details'],['none','block','block','none']);changeBackground();recyclerView();" type="button" name="button" class="btn login_btn">Login</button>
+									</div>
+								</form>
+							</div>
+
+							<div class="mt-4">
+								<div class="d-flex justify-content-center links">
+									Don't have an account? <a href="#" class="ml-2">Sign Up</a>
+								</div>
+								<div class="d-flex justify-content-center links">
+									<a href="#">Forgot your password?</a>
+								</div>
+							</div>
+						</div>
+						<div id="menu">
+							<nav class="navbar navbar-light light-blue lighten-4">
+
+								<!-- Navbar brand -->
+								<a class="navbar-brand" href="#">Navbar</a>
+
+								<!-- Collapse button -->
+								<button onclick="display('login','none')" class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+								aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
+									class="fas fa-bars fa-1x"></i></span></button>
+
+									<!-- Collapsible content -->
+									<div class="collapse navbar-collapse" id="navbarSupportedContent1">
+
+										<!-- Links -->
+										<ul class="navbar-nav mr-auto">
+											<li class="nav-item active">
+												<a class="nav-link" href="#">Médicaments <span class="sr-only">(current)</span></a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#">Pathologies</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#">Scanner</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#">Mon compte</a>
+											</li>
+										</ul>
+										<!-- Links -->
+
+									</div>
+									<!-- Collapsible content -->
+
+								</nav>
+							</div>
+							<div id="home">
+								<div class="filtre">
+									<div id="toDrill">
+										<input id="searchDrug" style="margin-bottom: 5px;" class="form-control" type="text" placeholder="Search" aria-label="Search">
+										<div class="dropdown">
+											<div class="actionBtn">
+												<button class="btn btn-primary dropdown-toggle" type="button" id="action" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+													Actions
+												</button>
+												<div class="dropdown-menu" style="width: 100%;padding: 6px;" aria-labelledby="action">
+													<div class="itemDroppped"><p>Afgdfgdfgfdg</p><input type="checkbox" class="dropdown-item" href="#"></div>
+													<div class="itemDroppped"><p>B</p><input type="checkbox" class="dropdown-item" href="#"></div>
+													<div class="itemDroppped"><p>C</p><input type="checkbox" class="dropdown-item" href="#"></div>
+												</div>
+											</div>
+
+											<div class="secBtn">
+												<button class="btn btn-primary dropdown-toggle" type="button" id="secondary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+													Effets Secondaires
+												</button>
+												<div class="dropdown-menu" style="width: 100%;padding: 6px;" aria-labelledby="secondary">
+													<div class="itemDroppped"><p>dsd</p><input type="checkbox" class="dropdown-item" href="#"></div>
+													<div class="itemDroppped"><p>s</p><input type="checkbox" class="dropdown-item" href="#"></div>
+													<div class="itemDroppped"><p>aze</p><input type="checkbox" class="dropdown-item" href="#"></div>
+												</div>
+											</div>
+											<button onclick="search()" type="button" class="btn btn-success">Lancer la recherche</button>
+										</div>
+
+									</div>
+									<div id="startDisplayFilter" onclick="filterMenu()" class="closeFilter"><p>fermer</p></div>
+
+								</div>
+								<div id="recyclerView">
+									
+								</div>
+								
+							</div>	
+							<div id="details">
+								<img id="imageDetails">
+								<h1 id="titleDetails"></h1>
+								<p id="textDetails"></p>
+								<button onclick="display(['login','menu','home','details'],['none','block','block','none']);" type="button" class="btn btn-secondary">Retour</button>
+							</div>					
+						</div>
+					</div>
+				</div>
+				<footer>
+					<div class="feature"></div>
+				</footer>
+			</main>
+		</div>
+		<script src="script.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</body>
+</html>

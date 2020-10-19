@@ -1,0 +1,14 @@
+#menu{
+	display:none;
+	background: #adf0fb;
+    position: fixed;
+    width: 234px;
+    z-index: 900;
+}
+
+
+#menu button{
+background-color: white;
+
+
+}

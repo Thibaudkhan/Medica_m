@@ -1,0 +1,25 @@
+#details{
+	margin-top: 50px;
+	display:none;
+	padding: 8px;
+}
+
+#details img{
+	width: 50%;
+	display: block;
+	margin: auto;
+}
+
+#details button{
+	display: block;
+	margin:auto;
+}
+
+#details h1{
+    font-size: xx-large;
+	text-align: center;
+}
+
+#details p{
+	text-align: justify;
+}
